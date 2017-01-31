@@ -12,6 +12,7 @@ const staticFiles = express.static(path.join(__dirname, '../../client/build'))
 app.use(staticFiles)
 
 router.get('/cities', (req, res) => {
+  console.log(`reading this from env > ${process.env.MY_VARIABLE}`)
   const cities = [
     {name: 'New York City', population: 8175133},
     {name: 'Los Angeles',   population: 3792621},

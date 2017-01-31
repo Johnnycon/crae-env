@@ -14,6 +14,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <h2>{process.env.REACT_APP_MY_VARIABLE}</h2>
         <ul>
           {this.state.cities.map( city => {
             return <li key={city.name}> <b>{city.name}</b>: {city.population}</li>
